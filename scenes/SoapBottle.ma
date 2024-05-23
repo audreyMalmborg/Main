@@ -1,6 +1,6 @@
 //Maya ASCII 2025 scene
 //Name: SoapBottle.ma
-//Last modified: Fri, May 17, 2024 02:55:53 PM
+//Last modified: Fri, May 17, 2024 02:59:25 PM
 //Codeset: UTF-8
 requires maya "2025";
 requires "mtoa" "5.4.0";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202402161156-0caf8d1269";
 fileInfo "osv" "Mac OS X 14.0";
-fileInfo "UUID" "CD19ECEA-1D44-289E-17BD-73B4753268FA";
+fileInfo "UUID" "243D0E37-1F43-877A-6F29-CD8C5A701851";
 createNode transform -s -n "persp";
 	rename -uid "C933BBAF-1346-808D-6151-88ACD174F1AF";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.37080258856567 11.97446943694221 27.316598793389762 ;
-	setAttr ".r" -type "double3" -12.338352729601009 22.599999999999692 1.2919137845750842e-15 ;
+	setAttr ".t" -type "double3" 10.552745572523419 12.592709168171108 27.490842158041371 ;
+	setAttr ".r" -type "double3" -13.538352729621392 -339.0000000000029 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "265F7E83-1741-ED4C-E10A-D79AC0EBEBDA";
 	setAttr -k off ".v" no;
@@ -1331,9 +1331,6 @@ createNode polyCylinder -n "polyCylinder2";
 	rename -uid "39BDB598-2449-F497-E60E-4CA584B6F7F7";
 	setAttr ".sc" 1;
 	setAttr ".cuv" 3;
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "43D2CF5B-F24F-F02D-19D9-C7905E2078BE";
-	setAttr ".sst" -type "string" "";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "C735329F-3449-1957-79A5-6CBA32924E52";
 	setAttr ".b" -type "string" (
@@ -1381,6 +1378,9 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "8D541118-974E-7D63-9EE6-518DFBB161F8";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "724D54AB-4C42-996C-4630-E69C324A8DD6";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
