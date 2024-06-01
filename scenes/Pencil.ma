@@ -1,6 +1,6 @@
 //Maya ASCII 2025 scene
 //Name: Pencil.ma
-//Last modified: Fri, May 24, 2024 06:29:52 PM
+//Last modified: Fri, May 24, 2024 06:31:33 PM
 //Codeset: UTF-8
 requires maya "2025";
 requires "mtoa" "5.4.0";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202402161156-0caf8d1269";
 fileInfo "osv" "Mac OS X 14.0";
-fileInfo "UUID" "FFC34469-7444-6499-228E-BAA7206110DE";
+fileInfo "UUID" "19EB5569-BB49-710C-AE8D-DDA9C114E7A6";
 createNode transform -s -n "persp";
 	rename -uid "44E722AA-A043-A526-E01B-58A9C8ACA77C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -29.959118618021762 8.9610886418133813 -3.8956482148953899 ;
-	setAttr ".r" -type "double3" 0.86164727038836375 -817.39999999992517 0 ;
+	setAttr ".t" -type "double3" 4.0060520133152693 17.111796550638097 -28.984198597290142 ;
+	setAttr ".r" -type "double3" -14.738352728560345 -907.80000000008135 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0C44B0F6-8E4A-CE0D-0490-839AB7F78570";
 	setAttr -k off ".v" no;
@@ -204,9 +204,6 @@ createNode shadingEngine -n "lambert2SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "7BB4AE91-AF45-32A3-3CAC-108DB47183EE";
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "BA3E813C-3F44-37FB-884F-DA911881535F";
-	setAttr ".sst" -type "string" "";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "5FE878C5-4940-33D9-FBFF-81AF8A6FE9A7";
 	setAttr ".b" -type "string" (
@@ -254,6 +251,9 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "DEC53B5C-FB45-F460-4578-BC9B4B1E68B8";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "C798C9F7-6248-1054-4F35-5CBA7EC1D90D";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;

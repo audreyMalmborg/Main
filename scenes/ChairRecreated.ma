@@ -1,6 +1,6 @@
 //Maya ASCII 2025 scene
 //Name: ChairRecreated.ma
-//Last modified: Wed, May 22, 2024 09:41:39 PM
+//Last modified: Wed, May 22, 2024 09:45:37 PM
 //Codeset: UTF-8
 requires maya "2025";
 requires "mtoa" "5.4.0";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202402161156-0caf8d1269";
 fileInfo "osv" "Mac OS X 14.0";
-fileInfo "UUID" "A2BEA5B4-DC4E-722B-B42E-D28D7E5A3960";
+fileInfo "UUID" "5919082C-714B-AC0B-E95C-64AC5925704E";
 createNode transform -s -n "persp";
 	rename -uid "F7AE3A29-D44E-A9FE-7B86-068AAF707376";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.611760632264778 7.2291665528974747 11.507573659532778 ;
-	setAttr ".r" -type "double3" -8.7383527183245793 -668.59999999995478 0 ;
+	setAttr ".t" -type "double3" -1.6121055860898794 3.9978850449935592 18.089042026120477 ;
+	setAttr ".r" -type "double3" 2.0616472816689297 -1079.799999999932 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4F9207C1-8848-6C3A-BB46-51BB43623708";
 	setAttr -k off ".v" no;
@@ -1263,9 +1263,6 @@ createNode polyTweak -n "polyTweak8";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[8:11]" -type "float3"  0.14377505 -0.14377505 0 -0.14377505
 		 -0.14377505 0 -0.14377505 0.14377505 0 0.14377505 0.14377505 0;
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "64633026-6D43-BD1A-949A-95BC74C5C979";
-	setAttr ".sst" -type "string" "";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "4018152F-D14C-5803-A826-AC8E87542A17";
 	setAttr ".b" -type "string" (
@@ -1313,6 +1310,9 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "77E10B0D-1845-2E28-7B78-09BE615087C1";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "7DBFDC48-3949-9326-23E6-46AF82A9387A";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
