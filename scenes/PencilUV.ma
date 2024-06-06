@@ -1,6 +1,6 @@
 //Maya ASCII 2025 scene
 //Name: PencilUV.ma
-//Last modified: Fri, May 31, 2024 09:37:49 PM
+//Last modified: Fri, May 31, 2024 09:42:07 PM
 //Codeset: UTF-8
 requires maya "2025";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.4.0";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202402161156-0caf8d1269";
 fileInfo "osv" "Mac OS X 14.0";
-fileInfo "UUID" "8FFDF21F-534A-F0C7-121B-0BBFE7B24B48";
+fileInfo "UUID" "B3F7A25D-BD40-5A62-1316-8BAC63E3E35E";
 createNode transform -s -n "persp";
 	rename -uid "44E722AA-A043-A526-E01B-58A9C8ACA77C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.037727781438885 13.671658566475928 -2.298441180614593 ;
-	setAttr ".r" -type "double3" -20.73835272909858 -978.20000000000778 0 ;
+	setAttr ".t" -type "double3" 15.438720006995071 11.73760196511623 -8.3979933649094782 ;
+	setAttr ".r" -type "double3" -7.5383527290797572 -961.40000000001942 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0C44B0F6-8E4A-CE0D-0490-839AB7F78570";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 12.018232685156766;
+	setAttr ".coi" 17.696577761151897;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -328,7 +328,7 @@ createNode polyTweakUV -n "polyTweakUV3";
 		 -0.23716003 0.26356333 -0.23462933 0.23364669 -0.23209861 0.20373005 -0.22956792
 		 0.17381349 -0.22703722 0.29808956 -0.5388568;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "743329AA-894C-BDCA-6BE9-B681B486CAA3";
+	rename -uid "8FA0A6DE-FE40-7E87-7EEA-EA8F4C36C07E";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
